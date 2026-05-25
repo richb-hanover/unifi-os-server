@@ -65,7 +65,7 @@ Use these commands to create the **main directory** named _unifi-os-server_ insi
 
 ```
 cd good-directory-to-hold-source-files
-git clone https://github.com/lemker/unifi-os-server.git
+git clone --depth 1 https://github.com/lemker/unifi-os-server.git
 ```
 
 To update your local copy use `git pull` like this:
