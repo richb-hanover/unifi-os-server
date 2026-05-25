@@ -1,0 +1,4 @@
+# Files to be ignored in the git repo
+
+# Ignore any "override" file. See CHECKLIST.md for details.
+docker-compose.override.yaml
