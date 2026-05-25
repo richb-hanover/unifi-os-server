@@ -13,7 +13,9 @@ Run [UniFi OS Server](https://blog.ui.com/article/introducing-unifi-os-server) d
 
 ## Docker Compose
 
-See [docker-compose.yaml](https://github.com/lemker/unifi-os-server/blob/main/docker-compose.yaml)
+See the [CHECKLIST.md](./CHECKLIST.md) file
+that describes the necessary changes to the
+[docker-compose.yaml](https://github.com/lemker/unifi-os-server/blob/main/docker-compose.yaml)
 
 ## Kubernetes
 
