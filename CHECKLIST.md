@@ -15,8 +15,8 @@ Customize these variables in the file:
 - You may need to adjust the `cgroup` settings if you are
   not running on standard Linux. 
   Claude and ChatGPT are your friends.
-- Check the **Convenience Techniques** below for long-term
-  maintenance.
+- Check the **Convenience Techniques** below for
+  tips about long-term maintenance.
   
 ## Testing and Running
 
@@ -38,8 +38,9 @@ docker compose down         # to stop the server
 
 ## Updating to a new Unifi OS Server Version
 
-Stop the container, then start it again,
-using the procedure above.
+When this repo has a new release,
+use the procedure above
+to stop the container, then start it again.
 When re-starting the container, Docker checks for `latest`
 and reloads the image if necessary.
 
@@ -55,11 +56,11 @@ main repo over time.
 
 Although the _docker-compose.yaml_ file contains everything
 required to run Unifi OS Server,
-you won't automatically get updates
-(however infrequent).
+if you just copy/paste it, you
+won't automatically get updates (however infrequent).
 
-To get an entire copy of the Unifi OS Server repo on your
-local machine, use the `git` program.
+To get a copy of the current Unifi OS Server repo
+on your local machine, use the `git` program.
 (The repo is fairly small.)
 Use these commands to create the **main directory** named _unifi-os-server_ inside the _good-directory-to-hold-source-files_:
 
@@ -71,7 +72,7 @@ git clone --depth 1 https://github.com/lemker/unifi-os-server.git
 To update your local copy use `git pull` like this:
 
 ```
-cd the-main-directory
+cd the-main-directory # (named unifi-os-server)
 git pull
 ```
 
@@ -119,4 +120,8 @@ will not be overwritten by a subsequent `git pull`.
 
 ## Testing and Running the Override File
 
-Use the same procedure as above. `docker compose up -d` to start.  `docker compose down` to stop.
+A couple tips:
+
+* `docker compose config` shows the result of the merged config files for debugging
+* Use the same procedure as above to
+  start and stop the container with the merged files.
